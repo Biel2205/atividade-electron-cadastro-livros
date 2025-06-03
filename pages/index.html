@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+
+  <link rel="stylesheet" href="../styles/style.css" />
+
+  <title>
+    Registrar Feedback - Sistema de Feedback do Aluno
+  </title>
+</head>
+
+<body>
+  <h1>Cadastro de Livros</h1>
+  <form id="formLivro">
+    <input type="text" id="titulo" placeholder="Título" required />
+    <input type="text" id="autor" placeholder="Autor" required />
+    <button type="submit">Cadastrar</button>
+  </form>
+  <ul id="listaLivros"></ul>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>
