@@ -14,28 +14,29 @@ const createWindow = () => {
 };
 
 ipcMain.handle("listar-livros", async function() {
+  
   var conexao = await mysql.createConnection({
-    host: "Localhost",
+    host: "localhost",
     user: "root",
     password: "root",
-    database: "livros_db"
+    database: "livross_db"
   })
 
-  var query = await conexao.execute("SELECT * FROM livros ")
+  var query = await conexao.execute("SELECT * FROM livross ")
 
   console.log("Query", query)
 
   return query[0]
 })
 
-ipcMain.handle("salvar-livros", async function (evento, titulo, autor) {
+ipcMain.handle("salvar-livros", async function (event, titulo, autor) {
   var conexao = await mysql.createConnection({
-    host: "Localhost",
+    host: "localhost",
     user: "root",
     password: "root",
-    database: "livros_db"
+    database: "livross_db"
   })
-  conexao.execute("INSERT INTO livros (titulo, autor) VALUES (?,?)", [titulo, autor])
+  conexao.execute("INSERT INTO livross (titulo, autor) VALUES (?,?)", [titulo, autor])
 })
 
 app.whenReady().then(() => {
