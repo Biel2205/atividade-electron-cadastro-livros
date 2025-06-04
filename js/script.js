@@ -2,7 +2,7 @@ const form = document.getElementById('formLivro');
 const lista = document.getElementById('listaLivros');
 
 form.addEventListener('submit', async (e) => {
-  e.preventDefault();
+  
   const titulo = document.getElementById('titulo').value;
   const autor = document.getElementById('autor').value;
   await window.api.salvarLivros( titulo, autor );
